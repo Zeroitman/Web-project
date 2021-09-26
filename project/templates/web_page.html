@@ -5,49 +5,53 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color: #d3b1d1">
-<nav class="bg-info">
-    <br>
-    <div class="container text-center">
-        <h3>Список сотрудников компании</h3>
-    </div>
+<body style="background-color: #9ed39c">
+<nav class="bg-success"><br>
+    <div class="container text-center"><h3>Список сотрудников компании</h3></div>
     <br>
 </nav>
 <br/>
-<div class="container">
-    <ul class="menu">
-        {% recursetree department %}
-            <li>
-                <a class="text-dark" href="/department/{{ node.id }}">{{ node.name }}</a>
-                {% if not node.is_leaf_node %}
-                    <ul class="children">
-                        {{ children }}
-                    </ul>
-                {% endif %}
-            </li>
-        {% endrecursetree %}
-    </ul>
+<div class="container text-center">
+    <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#department">
+        <h5 class="text-dark">Древовидная структура отделов</h5></button>
+    <div id="department" class="collapse text-left">
+        <ul class="menu">
+            {% recursetree department %}
+                <li>
+                    <a class="text-dark" href="/department/{{ node.id }}">{{ node.name }}</a>
+                    {% if not node.is_leaf_node %}
+                        <ul class="children">
+                            {{ children }}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endrecursetree %}
+        </ul>
+    </div>
     <hr>
+</div>
+<div class="container">
     <h4 class="text-center">Сотрудники выбранного отдела: {{ department_name }} </h4><br>
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-                <li class="page-item"><a class="page-link" href="?page=1">&laquo; Первая </a></li>
-                <li class="page-item"><a class="page-link"
+                <li class="page-item"><a class="page-link text-dark" href="?page=1">&laquo; Первая </a></li>
+                <li class="page-item"><a class="page-link text-dark"
                                          href="?page={{ page_obj.previous_page_number }}">Предыдущая</a></li>
             {% endif %}
             <li class="page-item">
-                <span class="current page-link">
+                <span class="current page-link text-dark">
                     Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
                 </span>
             </li>
             {% if page_obj.has_next %}
-                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Следующая</a>
+                <li class="page-item"><a class="page-link text-dark" href="?page={{ page_obj.next_page_number }}">Следующая</a>
                 </li>
-                <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Последняя
+                <li class="page-item"><a class="page-link text-dark" href="?page={{ page_obj.paginator.num_pages }}">Последняя
                     &raquo;</a></li>
             {% endif %}
         </ul>
