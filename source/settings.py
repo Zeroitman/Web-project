@@ -13,6 +13,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mptt',
     'project'
 ]
 
@@ -45,7 +46,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'source.wsgi.application'
-
 
 DATABASES = {
     'default': {

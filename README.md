@@ -15,18 +15,38 @@ sudo pip install virtualenv
 ```bash
 virtualenv -p python3.7 venv
 ```
+
 - После установки можно будет активировать виртуальное окружение:
 ```bash
 source venv/bin/activate
 ```
+
 - Установите все зависимости проекта:
 ```bash
 pip install -r requirements.txt
 ```
+
 - Проведите миграции:
 ```bash
 ./manage.py migrate
 ```
+
+- Загрузите дамп содержащий 25 отделов:
+```bash
+ ./manage.py loaddata fixtures/dump_departments.json
+```
+
+- Загрузите дамп содержащий 50 тыс. сотрудников (придётся подождать минуты 2) или выполните функцию generate_employes, 
+которая сгенирирует 50 тыс. сотрудников:
+```bash
+ ./manage.py loaddata fixtures/dump_employes.json
+```
+
+- Создайте суперпользователя(необязательно):
+```bash
+./manage.py createsuperuser
+```
+
 - Запустите проект:
 
 ```bash

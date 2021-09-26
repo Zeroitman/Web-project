@@ -1,0 +1,302 @@
+[
+{
+  "model": "project.department",
+  "pk": 1,
+  "fields": {
+    "name": "Отдел директора",
+    "parent": null,
+    "lft": 1,
+    "rght": 50,
+    "tree_id": 2,
+    "level": 0
+  }
+},
+{
+  "model": "project.department",
+  "pk": 2,
+  "fields": {
+    "name": "Отдел исполнения",
+    "parent": 1,
+    "lft": 6,
+    "rght": 17,
+    "tree_id": 2,
+    "level": 1
+  }
+},
+{
+  "model": "project.department",
+  "pk": 3,
+  "fields": {
+    "name": "Отдел финансов",
+    "parent": 1,
+    "lft": 44,
+    "rght": 49,
+    "tree_id": 2,
+    "level": 1
+  }
+},
+{
+  "model": "project.department",
+  "pk": 4,
+  "fields": {
+    "name": "Отдел маркетинга",
+    "parent": 1,
+    "lft": 20,
+    "rght": 25,
+    "tree_id": 2,
+    "level": 1
+  }
+},
+{
+  "model": "project.department",
+  "pk": 5,
+  "fields": {
+    "name": "Отдел управления сбыта",
+    "parent": 1,
+    "lft": 26,
+    "rght": 43,
+    "tree_id": 2,
+    "level": 1
+  }
+},
+{
+  "model": "project.department",
+  "pk": 6,
+  "fields": {
+    "name": "Отдел бухгалтерии",
+    "parent": 1,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 2,
+    "level": 1
+  }
+},
+{
+  "model": "project.department",
+  "pk": 7,
+  "fields": {
+    "name": "Отдел менеджмента по БД",
+    "parent": 4,
+    "lft": 21,
+    "rght": 22,
+    "tree_id": 2,
+    "level": 2
+  }
+},
+{
+  "model": "project.department",
+  "pk": 8,
+  "fields": {
+    "name": "Отдел рекламы",
+    "parent": 4,
+    "lft": 23,
+    "rght": 24,
+    "tree_id": 2,
+    "level": 2
+  }
+},
+{
+  "model": "project.department",
+  "pk": 9,
+  "fields": {
+    "name": "Отдел юриспруденции",
+    "parent": 3,
+    "lft": 47,
+    "rght": 48,
+    "tree_id": 2,
+    "level": 2
+  }
+},
+{
+  "model": "project.department",
+  "pk": 10,
+  "fields": {
+    "name": "Отдел экономических операций",
+    "parent": 3,
+    "lft": 45,
+    "rght": 46,
+    "tree_id": 2,
+    "level": 2
+  }
+},
+{
+  "model": "project.department",
+  "pk": 11,
+  "fields": {
+    "name": "Отдел кадров",
+    "parent": 1,
+    "lft": 18,
+    "rght": 19,
+    "tree_id": 2,
+    "level": 1
+  }
+},
+{
+  "model": "project.department",
+  "pk": 12,
+  "fields": {
+    "name": "Отдел склада",
+    "parent": 2,
+    "lft": 11,
+    "rght": 12,
+    "tree_id": 2,
+    "level": 2
+  }
+},
+{
+  "model": "project.department",
+  "pk": 13,
+  "fields": {
+    "name": "Отдел хозяйственного обеспечения",
+    "parent": 2,
+    "lft": 15,
+    "rght": 16,
+    "tree_id": 2,
+    "level": 2
+  }
+},
+{
+  "model": "project.department",
+  "pk": 14,
+  "fields": {
+    "name": "Отдел связи",
+    "parent": 2,
+    "lft": 7,
+    "rght": 8,
+    "tree_id": 2,
+    "level": 2
+  }
+},
+{
+  "model": "project.department",
+  "pk": 15,
+  "fields": {
+    "name": "Отдел закупок",
+    "parent": 5,
+    "lft": 27,
+    "rght": 28,
+    "tree_id": 2,
+    "level": 2
+  }
+},
+{
+  "model": "project.department",
+  "pk": 16,
+  "fields": {
+    "name": "Отдел качества",
+    "parent": 5,
+    "lft": 29,
+    "rght": 30,
+    "tree_id": 2,
+    "level": 2
+  }
+},
+{
+  "model": "project.department",
+  "pk": 17,
+  "fields": {
+    "name": "Отдел продаж",
+    "parent": 5,
+    "lft": 31,
+    "rght": 40,
+    "tree_id": 2,
+    "level": 2
+  }
+},
+{
+  "model": "project.department",
+  "pk": 18,
+  "fields": {
+    "name": "Отдел социальных проектов",
+    "parent": 5,
+    "lft": 41,
+    "rght": 42,
+    "tree_id": 2,
+    "level": 2
+  }
+},
+{
+  "model": "project.department",
+  "pk": 19,
+  "fields": {
+    "name": "Отдел регионального направления",
+    "parent": 17,
+    "lft": 32,
+    "rght": 39,
+    "tree_id": 2,
+    "level": 3
+  }
+},
+{
+  "model": "project.department",
+  "pk": 20,
+  "fields": {
+    "name": "Отдел агентов",
+    "parent": 19,
+    "lft": 33,
+    "rght": 34,
+    "tree_id": 2,
+    "level": 4
+  }
+},
+{
+  "model": "project.department",
+  "pk": 21,
+  "fields": {
+    "name": "Отдел дилеров",
+    "parent": 19,
+    "lft": 35,
+    "rght": 36,
+    "tree_id": 2,
+    "level": 4
+  }
+},
+{
+  "model": "project.department",
+  "pk": 22,
+  "fields": {
+    "name": "Отдел оптовых операций",
+    "parent": 19,
+    "lft": 37,
+    "rght": 38,
+    "tree_id": 2,
+    "level": 4
+  }
+},
+{
+  "model": "project.department",
+  "pk": 23,
+  "fields": {
+    "name": "Отдел секретаря",
+    "parent": 2,
+    "lft": 9,
+    "rght": 10,
+    "tree_id": 2,
+    "level": 2
+  }
+},
+{
+  "model": "project.department",
+  "pk": 24,
+  "fields": {
+    "name": "Отдел телефонии",
+    "parent": 2,
+    "lft": 13,
+    "rght": 14,
+    "tree_id": 2,
+    "level": 2
+  }
+},
+{
+  "model": "project.department",
+  "pk": 25,
+  "fields": {
+    "name": "Отдел АХО",
+    "parent": 1,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 2,
+    "level": 1
+  }
+}
+]
